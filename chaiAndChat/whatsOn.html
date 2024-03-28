@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" data-s-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whats On</title>
+
+    <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+
+  <!-- css  -->
+
+  <link href="./assets/css/custom.css" rel="stylesheet">
+
+  <!-- bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+    <style>
+        .btnn {
+            position: relative;
+            color: var(--gold-crayola);
+            font-size: var(--fontSize-label-2);
+            font-weight: var(--weight-bold);
+            text-transform: uppercase;
+            letter-spacing: var(--letterSpacing-5);
+            max-width: max-content;
+            border: 2px solid var(--gold-crayola);
+            padding: 12px 45px;
+            overflow: hidden;
+            z-index: 1;
+          }
+          
+          .btnn::before {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200%;
+            height: 200%;
+            border-radius: var(--radius-circle);
+            background-color: var(--gold-crayola);
+            transition: var(--transition-2);
+            z-index: -1;
+          }
+          
+          .btnn .text { transition: var(--transition-1); }
+          
+          .btnn .text-2 {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: max-content;
+            color: var(--smoky-black-1);
+          }
+          
+          .btnn:is(:hover, :focus-visible)::before { bottom: -50%; }
+          
+          .btnn:is(:hover, :focus-visible) .text-1 { transform: translateY(-40px); }
+          
+          .btnn:is(:hover, :focus-visible) .text-2 {
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+          
+          .btnn-secondary {
+            background-color: var(--gold-crayola);
+            color: var(--black);
+          }
+          
+          .btnn-secondary::before { background-color: var(--smoky-black-1); }
+          
+          .btnn-secondary .text-2 { color: var(--white); }
+
+          .has-before,
+        .has-after {
+        position: relative;
+        z-index: 1;
+        }
+
+        .has-before::before,
+        .has-after::after {
+        content: "";
+        position: absolute;
+
+        .login-btn:hover
+        {
+            transform: translateY(-10px);
+        }
+
+        .addGreyBorder
+        {
+            border:2px solid grey;
+        }
+        }
+
+        .my-cart
+        {
+            background-color: var(--gold-crayola);
+            border-color: var(--gold-crayola);
+            font-weight:600;
+        
+        }
+ 
+          
+    </style>
+
+
+</head>
+<body data-bs-theme="dark">
+
+    <!-- Top bar section  -->
+    <header>
+        <div class="top-bar">
+          <div class="contact-info">
+            <span style="font-weight:bold">
+                <span style="color:var(--gold-crayola)">Contact: </span>+123456789 |
+                <span style="color:var(--gold-crayola)">Email: </span> info@example.com
+            </span>
+          </div>
+          <div class="user-actions">
+            <a href="login.html" class="btn btn-warning my-cart py-1" style="color:black;">My Cart</></a>
+            <a href="#" id="logOut" style="display:none">Log Out</a>
+            <!-- You can add a login/logout button here based on user status -->
+          </div>
+        </div>
+    </header>
+      
+
+    <!-- NAVBAR SECTION  -->
+    <header class="navbar p-3 text-bg">
+        <div> 
+            <!-- THE ABOVE DIV HAD CLASS="CONTAINER" IN IT -->
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <!-- <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href=""></use></svg>
+            </a> -->
+            <img src="./assets/images/logo.svg" style="height: 35mm; padding: 20px;">
+    
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="index.html" class="nav-link px-2 hover-underline btn" style="margin-right:10px; color:aliceblue">Home</a></li>
+              <li><a href="whatsOn.html" class="nav-link px-2 btn" style="margin-right:10px; color:aliceblue ; border-bottom: 1px solid var(--gold-crayola);">Whats On</a></li>
+              <li>
+                <!-- <a href="#" class="nav-link px-2 hover-underline btn" style="margin-right:10px; color:aliceblue">Private Hire</a> -->
+                <div class="dropdown" onclick="toggleDropdown()">
+                  <a href="#" class="nav-link px-2 hover-underline btn" style="margin-right:10px; color:aliceblue">Private Hire</a>
+                  <div class="dropdown-content" style="padding:10px">
+                      <a href="#">Community Benefits Club</a>
+                      <a href="#">Private</a>
+                      <a href="#">Charity</a>
+                      <a href="#">Corporate</a>
+                      <a href="#">Wedding</a>
+
+                  </div>
+              </div>
+              </li>
+              <li><a href="football.html" class="nav-link px-2 hover-underline btn" style="margin-right:10px; color:aliceblue">Football</a></li>
+              <li><a href="gallery.html" class="nav-link px-2 hover-underline btn" style="margin-right:10px; color:aliceblue">Gallery</a></li>
+              <li><a href="christmas.html" class="nav-link px-2 hover-underline btn" style="margin-right:10px; color:aliceblue">Christmas</a></li>
+              <li><a href="foodAndDrink.html" class="nav-link px-2 hover-underline btn" style="margin-right:20px; color:aliceblue">Food & Drink</a></li>
+              <li><a href="blogs.html" class="nav-link px-2 hover-underline btn" style="margin-right:20px; color:aliceblue">Blogs</a></li>
+
+
+
+            </ul>
+    
+            <!-- <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+              <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+            </form> -->
+    
+            <!-- <div class="text-end">
+              <button type="button" class="btn btn-outline-light me-2">Login</button>
+            <button type="button" class="btn btn-warning">Sign-up</button> -->
+            <!-- </div>  --> 
+            <a href="login.html" class="btnn btnn-secondary" style="text-decoration:none; font-size:small; border-radius:0.375rem" onmouseover="hi()">
+                <span class="login-btn">Login</span>
+                <span class="text text-2 table-btn" aria-hidden="true">Find A Table</span>
+            </a>
+          </div>
+        </div>
+      </header>
+
+    <!-- Whats On  -->
+
+    <section id="whats-on">
+
+    <div class="row">
+        <div class="col-md-12 col-xs-12">
+            <div class="ts-intro">
+                <h1 class="into-sub-title text-center padding-top-bottom"><span class="main-heading-border">WHAT'S ON</span></h1>
+            </div>
+        </div>
+    </div>
+    <div class="whats-on-hr"></div>
+    <div class="row" style="margin-bottom:50px">
+      <div class="col-md-9"></div>
+      <div class="col-md-3">
+          <!-- <span style="background: #001c40; border: #001c40; color: #fff;">Choose By Month</span> -->
+          <div class="dropdown">
+              <select class="btn dropdown-toggle" type="button" data-toggle="dropdown" style="background: #001c40; border: #001c40; color: #fff;">
+                  <span class="caret"></span>
+                  <option disabled selected><a href="/alleventslist#ts-features">Choose By Month</a></option>
+                  <option><a href="">Show All</a></option>
+                  <option><a href="">January</a></option>
+                  <option><a href="">February</a></option>
+                  <option><a href="">March</a></option>
+                  <option><a href="">April</a></option>
+                  <option><a href="">May</a></option>
+                  <option><a href="">June</a></option>
+                  <option><a href="">July</a></option>
+                  <option><a href="">August</a></option>
+                  <option><a href="">September</a></option>
+                  <option><a href="">October</a></option>
+                  <option><a href="">November</a></option>
+                  <option><a href="">December</a></option>
+              </select>
+                  
+    
+          </div>
+      </div>
+  </div>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row-content">
+                <span class="whtson-h">Saturday,October 28</span>
+              <h2>Welcome to Our Paradise</h2>
+              <p>Discover the beauty of nature in our breathtaking paradise. Relax, rejuvenate, and experience tranquility like never before.</p>
+              <a href="#" class="book-now">Book Now</a>
+            </div>
+          </div>
+          
+          <div class="col-md-6 justify-content-end">
+            <div class="row-content">
+              <img class="whats-on-img" src="./assets/images/event-1.jpg" alt="Paradise Image">
+            </div>
+          </div>
+        </div>
+        <div class="custom-divider"></div>
+        <div class="row last-row">
+          <div class="col-md-6">
+            <div class="row-content">
+                <span class="whtson-h">Saturday,October 28</span>
+
+              <h2>Your Dream Vacation Awaits</h2>
+              <p>Immerse yourself in luxury and comfort. Let us make your dream vacation a reality.</p>
+              <a href="#" class="book-now">Book Now</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row-content">
+              <img class="whats-on-img" src="./assets/images/event-2.jpg" alt="Vacation Image">
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+
+ <!-- FOOTER  -->
+    
+ <div class="container-fluid" id="footer">
+  <footer>
+    <!-- bye bye  -->
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <h5 class="footer-title">Services</h5>
+        <div class="row">
+          <div class="col">
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-muted">Home</a></li>
+              <li class="nav-item mb-2"><a href="whatsOn.html" class="nav-link p-0 text-muted">Whats On</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Private Hire</a></li>
+              <li class="nav-item mb-2"><a href="football.html" class="nav-link p-0 text-muted">Football</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="gallery.html" class="nav-link p-0 text-muted">Gallery</a></li>
+              <li class="nav-item mb-2"><a href="christmas.html" class="nav-link p-0 text-muted">Christmas</a></li>
+              <li class="nav-item mb-2"><a href="foodAndDrink.html" class="nav-link p-0 text-muted">Food & Drink</a></li>
+              <li class="nav-item mb-2"><a href="blogs.html" class="nav-link p-0 text-muted">Blogs</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4 mb-3">
+        <h5 class="footer-title">Address</h5>
+        The Jazz Cafe Between Gate 7 & 8 Shooters Way Select Car Leasing Stadium
+      </div>
+    
+      <div class="col-md-4 mb-3">
+        <form>
+          <h5 class="footer-title">Subscribe to our newsletter</h5>
+          <p>Monthly digest of what's new and exciting from us.</p>
+          <div class="d-flex flex-column w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+            <button class="btn footer-btn" type="button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+    
+
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 border-top">
+      <p>© 2022 Company, Inc. All rights reserved.</p>
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+      </ul>
+    </div>
+  </footer>
+</div>
+
+<!-- FOOTER END -->
+    <!-- Making changes from here -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <script src="./assets/js/inititalization.js"></script>
+    <script src="./assets/js/custom.js"></script>
+    <script src="./assets/js/monitor.js"></script>
+
+</body>
+</html>

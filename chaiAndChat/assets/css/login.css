@@ -1,0 +1,318 @@
+:root {
+
+    /**
+     * COLORS
+     */
+  
+    --gold-crayola: hsl(38, 61%, 73%);
+    --quick-silver: hsla(0, 0%, 65%, 1);
+    --davys-grey: hsla(30, 3%, 34%, 1);
+    --smoky-black-1: hsla(40, 12%, 5%, 1);
+    --smoky-black-2: hsla(30, 8%, 5%, 1);
+    --smoky-black-3: hsla(0, 3%, 7%, 1);
+    --eerie-black-1: hsla(210, 4%, 9%, 1);
+    --eerie-black-2: hsla(210, 4%, 11%, 1);
+    --eerie-black-3: hsla(180, 2%, 8%, 1);
+    --eerie-black-4: hsla(0, 0%, 13%, 1);
+    --white: hsla(0, 0%, 100%, 1);
+    --white-alpha-20: hsla(0, 0%, 100%, 0.2);
+    --white-alpha-10: hsla(0, 0%, 100%, 0.1);
+    --black: hsla(0, 0%, 0%, 1);
+    --black-alpha-80: hsla(0, 0%, 0%, 0.8);
+    --black-alpha-15: hsla(0, 0%, 0%, 0.15);
+  
+    /**
+     * GRADIENT COLOR
+     */
+  
+    --loading-text-gradient: linear-gradient(90deg, transparent 0% 16.66%, var(--smoky-black-3) 33.33% 50%,  transparent 66.66% 75%);
+    --gradient-1: linear-gradient(to top,hsla(0, 0%, 0%, 0.9),hsla(0, 0%, 0%, 0.7),transparent);
+  
+    /**
+     * TYPOGRAPHY
+     */
+  
+    /* font-family */
+    --fontFamily-forum: 'Forum', cursive;
+    --fontFamily-dm_sans: 'DM Sans', sans-serif;
+  
+    /* font-size */
+    --fontSize-display-1: calc(1.3rem + 6.7vw);
+    --fontSize-headline-1: calc(2rem + 2.5vw);
+    --fontSize-headline-2: calc(1.3rem + 2.4vw);
+    --fontSize-title-1: calc(1.6rem + 1.2vw);
+    --fontSize-title-2: 2.2rem;
+    --fontSize-title-3: 2.1rem;
+    --fontSize-title-4: calc(1.6rem + 1.2vw);
+    --fontSize-body-1: 2.4rem;
+    --fontSize-body-2: 1.6rem;
+    --fontSize-body-3: 1.8rem;
+    --fontSize-body-4: 1.6rem;
+    --fontSize-label-1: 1.4rem;
+    --fontSize-label-2: 1.2rem;
+  
+    /* font-weight */
+    --weight-regular: 400;
+    --weight-bold: 700;
+  
+    /* line-height */
+    --lineHeight-1: 1em;
+    --lineHeight-2: 1.2em;
+    --lineHeight-3: 1.5em;
+    --lineHeight-4: 1.6em;
+    --lineHeight-5: 1.85em;
+    --lineHeight-6: 1.4em;
+  
+    /* letter-spacing */
+    --letterSpacing-1: 0.15em;
+    --letterSpacing-2: 0.4em;
+    --letterSpacing-3: 0.2em;
+    --letterSpacing-4: 0.3em;
+    --letterSpacing-5: 3px;
+  
+    /**
+     * SPACING
+     */
+  
+    --section-space: 70px;
+  
+    /**
+     * SHADOW
+     */
+  
+    --shadow-1: 0px 0px 25px 0px hsla(0, 0%, 0%, 0.25);
+  
+    /**
+     * BORDER RADIUS
+     */
+  
+    --radius-24: 24px;
+    --radius-circle: 50%;
+  
+    /**
+     * TRANSITION
+     */
+  
+    --transition-1: 250ms ease;
+    --transition-2: 500ms ease;
+    --transition-3: 1000ms ease;
+  
+  }
+
+  body 
+  {
+    color:aliceblue;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: var((--eerie-black-1));
+    background-repeat: no-repeat;
+    
+    }
+/* Target the entire page's scroll bar */
+body::-webkit-scrollbar {
+    width: 5px; /* Set the width of the scroll bar */
+  }
+  
+  /* Track */
+  body::-webkit-scrollbar-track {
+    background: var(--gold-crayola); /* Set the background color of the track */
+  }
+  
+  /* Handle */
+  body::-webkit-scrollbar-thumb {
+    background: #000080; /* Set the color of the scroll bar handle */
+     /* Set the border radius of the handle */
+  }
+
+.card0 {
+    box-shadow: 0px 4px 8px 0px #757575;
+    border-radius: 0px;
+}
+
+.card2 {
+    margin: 0px 40px;
+}
+
+.logo {
+    width: 200px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 35px;
+}
+
+.image {
+    width: 360px;
+    height: 280px;
+}
+
+.border-line {
+    border-right: 1px solid #EEEEEE;
+}
+
+.facebook {
+    background-color: #3b5998;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.twitter {
+    background-color: #1DA1F2;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.linkedin {
+    background-color: #2867B2;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.line {
+    height: 1px;
+    width: 45%;
+    background-color: #E0E0E0;
+    margin-top: 10px;
+}
+
+.or {
+    width: 10%;
+    font-weight: bold;
+}
+
+.text-sm {
+    font-size: 14px !important;
+}
+
+::placeholder {
+    color: #BDBDBD;
+    opacity: 1;
+    font-weight: 300
+}
+
+:-ms-input-placeholder {
+    color: #BDBDBD;
+    font-weight: 300
+}
+
+::-ms-input-placeholder {
+    color: #BDBDBD;
+    font-weight: 300
+}
+
+input, textarea {
+    padding: 10px 12px 10px 12px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #2C3E50;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+input:focus, textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #304FFE;
+    outline-width: 0;
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0;
+}
+
+a {
+    color: inherit;
+    cursor: pointer;
+}
+
+.btn-blue {
+    background-color: #1A237E;
+    width: 150px;
+    color: #fff;
+    border-radius: 2px;
+}
+
+.btn-blue:hover {
+    background-color: #000;
+    cursor: pointer;
+    color:aliceblue;
+}
+
+.bg-blue {
+    color: #fff;
+    background-color: #1A237E;
+}
+
+.inner-div
+{
+    background-image: url('../images/shape-2.png');
+    margin: 0px;
+    background-color: var(--eerie-black-1);
+}
+
+.login-card, .login-card a
+{
+    background-color: var(--eerie-black-1);
+    color:#CCCCCC;
+}
+
+.outer-div
+{
+    background-color: var(--gold-crayola);
+    margin: 0;
+}
+
+.logo
+{
+    height: 100%;
+    width:100%;
+}
+
+.login-btn
+{
+    background-color:var(--gold-crayola);
+    color:black;
+    transition: 500ms ease;
+}
+
+@media screen and (max-width: 991px) {
+    .logo {
+        margin-left: 0px;
+    }
+
+    .image {
+        width: 300px;
+        height: 220px;
+    }
+
+    .border-line {
+        border-right: none;
+    }
+
+    .card2 {
+        border-top: 1px solid #EEEEEE !important;
+        margin: 0px 15px;
+    }
+}
